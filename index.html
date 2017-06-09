@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+	<meta charset="UTF-8">
+	<title>DJ Stream Dream</title>
+
+	<!-- Compiled and minified CSS -->
+  	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.2.10/semantic.min.css">
+	<!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css?family=Palanquin+Dark:700" rel="stylesheet">
+	<!-- Link To CSS File -->
+	<link rel="stylesheet" href="style.css">
+	
+</head>
+<body>
+	<div class="header">
+		<div class="ui container"></div>
+	</div>
+	<div class="ui container content">
+		<!-- logo display -->
+		<div class="ui container center aligned">
+			<h1 id="logo"><i class="music icon"></i> DJ Stream Dream <i class="music icon"></i></h1>
+		</div>
+			<br>
+		<!-- enter artist or song search box -->
+		<div class="searchArea">
+			<form class="ui form">
+				<div class="field">
+					<label class="center aligned"><h1 id="searchText">Enter Artist or Song Name:</h1></label>
+            		<input type="search" placeholder="Enter song or artist" id="inputValue" size="45">
+            	</div>
+				<!-- options to search by an artist or by a song -->
+				<div class="ui form">
+				  	<div class="field">
+					    <label class="center aligned"><h4 id="searchText">Select:</h4></label>
+					    <select id="artistOrSong" type="artistOrTrack" class="ui search dropdown">
+					      	<option value="0">Artist</option>
+					    	<option value="1">Track</option>
+						</select>
+					</div>
+				</div>
+            	<br>
+            	<!-- search button -->
+            	<div class="field">
+					<button type="submit" class="ui red button" id="submitBtn" style="background: linear-gradient(#e80b0b 28%, #010304 115%)">Search</button>
+        		</div>
+			</form>
+		</div>
+			<br>
+			<br>
+			<!-- displays song results -->
+			<div class="displayArea">
+			<div class="ui container">
+				<h1><span id="displayArtist"></span></h1>
+				<div class="newTest"></div>
+			</div>
+			
+			<table class="ui red selectable celled table displayArea" id="displayHeader">
+				<!-- displays the heading of the table -->
+				<thead>
+			    	<tr>
+			    		<th>Song Name</th>
+				    	<th>Album</th>
+				    	<th>Click to Watch on YouTube</th>
+				    	<th>Click To Download</th>
+			  		</tr>
+			  	</thead>
+			  	<tbody id="displayTable">
+			    	<!--Table displays 10 songs when searching by artist or 5 songs when searching by song-->
+			  	</tbody>
+			</table>
+
+			<br>
+			<h2><span>Song Download History</span></h2>
+			<table class="ui red selectable celled table" id="histHead">
+				<thead>
+			    	<tr>
+			    		<th>Artist</th>
+				    	<th>Song Name</th>
+				    	<th>Date and Time Downloaded</th>
+			  		</tr>
+			  	</thead>
+			  	<tbody id="histLog">
+			    	<!--Table displays all songs downloaded -->
+			  	</tbody>
+			</table>
+			<br>
+			<br>
+			</div>			
+	</div>
+  	<!-- Added link to moment.js -->
+    <script src="https://cdn.jsdelivr.net/momentjs/2.12.0/moment.min.js"></script>
+	<!-- MP3 Downloader Information -->
+	<script type="text/javascript" src="http://api.convert2mp3.cc/api.js"></script>
+	<!-- FireBase Connection -->
+	<script src="https://www.gstatic.com/firebasejs/4.1.1/firebase.js"></script>
+	<!-- jQuery Connection -->
+	<script src="https://code.jquery.com/jquery-3.2.1.min.js"
+  	integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4="
+  	crossorigin="anonymous"></script>
+	<!-- Link To Script File -->
+	<script type="text/javascript" src="script.js"></script>
+</body>
+</html>
